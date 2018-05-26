@@ -1,3 +1,5 @@
+![](images/HeaderPic.png "Microsoft Cloud Workshops")
+
 # SQL Server hybrid cloud
 
 ## Whiteboard design session trainer guide
