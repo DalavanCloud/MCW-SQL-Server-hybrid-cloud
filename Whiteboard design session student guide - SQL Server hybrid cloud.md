@@ -27,15 +27,15 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 - [SQL Server hybrid cloud whiteboard design session student guide](#sql-server-hybrid-cloud-whiteboard-design-session-student-guide)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Step 1: Review the customer case study](#step-1--review-the-customer-case-study)
-            - [Facilitator/subject matter expert (SME) presentation of customer case study](#facilitator-subject-matter-expert-sme-presentation-of-customer-case-study)
-            - [Customer situation](#customer-situation)
-            - [Customer needs](#customer-needs)
-            - [Customer objections](#customer-objections)
-            - [Infographic for common scenarios](#infographic-for-common-scenarios)
-            - [Azure Site Recovery](#azure-site-recovery)
-            - [Azure Traffic Manager](#azure-traffic-manager)
-            - [SQL Server Always Encrypted](#sql-server-always-encrypted)
-            - [SQL Server Stretch Database](#sql-server-stretch-database)
+        - [Facilitator/subject matter expert (SME) presentation of customer case study](#facilitator-subject-matter-expert-sme-presentation-of-customer-case-study)
+        - [Customer situation](#customer-situation)
+        - [Customer needs](#customer-needs)
+        - [Customer objections](#customer-objections)
+        - [Infographic for common scenarios](#infographic-for-common-scenarios)
+        - [Azure Site Recovery](#azure-site-recovery)
+        - [Azure Traffic Manager](#azure-traffic-manager)
+        - [SQL Server Always Encrypted](#sql-server-always-encrypted)
+        - [SQL Server Stretch Database](#sql-server-stretch-database)
     - [Step 2: Design a proof of concept solution](#step-2--design-a-proof-of-concept-solution)
     - [Step 3: Present the solution](#step-3--present-the-solution)
     - [Wrap-up](#wrap-up)
@@ -65,7 +65,7 @@ Attendees will be better able to design a hybrid disaster recovery solution betw
 
 Analyze your customer's needs.
 
-#### Facilitator/subject matter expert (SME) presentation of customer case study 
+### Facilitator/subject matter expert (SME) presentation of customer case study 
 
 Timeframe: 15 minutes
 
@@ -78,7 +78,7 @@ Directions: With all participants in the session, the facilitator/SME presents a
 3.  As a table team, review the following customer case study.
 
 
-#### Customer situation
+### Customer situation
 
 Fabrikam Publishing is a media and publishing company in Seattle, Washington with approximately 5000 employees. They have a successful direct-to-consumer e-commerce site built with .NET, and they use SQL Server to store customer profile and order information.
 
@@ -101,7 +101,7 @@ Finally, Fabrikam has a requirement to store the database backups offsite in an 
 ![Fabrikam\'s datacenter is represented as icons that are labeled Web Farm, Application Servers, VMWare, and vCenter. Below that is another icon that is labeled SQL Server 2016, which is Fabrikam\'s database platform.](images/Whiteboarddesignsessionstudentguide-SQLServerhybridcloudimages/media/image2.png "Fabrikam Publishing data center illustration")
 
 
-#### Customer needs 
+### Customer needs 
 
 1.  Full multi-site disaster recovery solution with minimal complexity, orchestrated failover, and near-zero data loss.
 
@@ -120,7 +120,7 @@ Finally, Fabrikam has a requirement to store the database backups offsite in an 
 8.  Secure offsite backups in less than two hours after backup completion.
 
 
-#### Customer objections 
+### Customer objections 
 
 1.  Solution must support orchestrated failover so that failover does not require all hands-on deck.
 
@@ -137,21 +137,21 @@ Finally, Fabrikam has a requirement to store the database backups offsite in an 
 7.  Backups need to be secured offsite in less than two hours.
 
 
-#### Infographic for common scenarios
+### Infographic for common scenarios
 
-#### Azure Site Recovery
+### Azure Site Recovery
 
 ![This is a screenshot of a slide. Common scenarios for Azure Site Recovery include the following bulleted list items: Support for on-premises to on-premises, and on-premises to Azure failover, Automated protection and replication of on-premises, Hyper-V, and VMware machines, Orchestrated failover, Customizable recovery plans, Recovery plan testing To the right of the list is a diagram of the multiple deployment architectures of Azure Site Recover: on-premises datacenter to Azure, and on-premises datacenter to on-premises datacenter.](images/Whiteboarddesignsessionstudentguide-SQLServerhybridcloudimages/media/image3.png "Common Azure Site Recovery scenarios")
 
-#### Azure Traffic Manager
+### Azure Traffic Manager
 
 ![This diagram is an example of the Failover traffic routing method for a set of endpoints. In step 1, Traffic Manager first receives an incoming request from a client through DNS and locates the profiles, which is represented as an arrow pointing from a user's laptop to an octagon with arrows inside of it. The octagon has an exploded table with the following columns: Endpoints and Status. The first row has an endpoint of CS-A and a status of Offline (highlighted in red). The second row has an endpoint of CS-B and a status of Online. The third row has an endpoint of CS-C and a status of Online. The fourth row has an endpoint of CS-D and a status of Online. Step 2 is a check of the ordered endpoints. The profile contains an ordered list of endpoints. Traffic Manager check which endpoint is first in the list. If the endpoint is online (based on the ongoing endpoint monitoring), it will specify that endpoint's DNS name in the DNS response to the client. If the endpoint is offline, Traffic Manager determines the next online endpoint in the list. In this example CS-A is offline (unavailable), but CS-B is online (available). In step 3, Traffic Manager returns CS-B's domain name to the client's DNS server, which resolves the domain name to an IP address and sends it to the client. This is represented by an arrow that points from the octagon through DNS to the laptop and user from step one. In step 4, the client initiates traffic to CS-B, which is represented as an arrow that points from the client to an icon of CS-B (Standby 1) at the bottom. To the left of this icon is an icon representing CS-A (Primary), which is in an Offline state. To the right of CS-B are icons representing CS-C (Standby 2) and CS-D (Standby 3).](images/Whiteboarddesignsessionstudentguide-SQLServerhybridcloudimages/media/image4.png "Diagram of the Failover traffic routing method for a set of endpoints")
 
-#### SQL Server Always Encrypted
+### SQL Server Always Encrypted
 
 ![On the Trusted side (left), an Apps icon has bidirectional arrows pointing to and from an Enhanced ADO.NET Library icon. At the bottom-left corner is a Column Master Key icon. On the SQL Server side (right), the bidirectional arrows continue and point to and from a database icon. Below this icon is a table with the following columns: Name (dbo.Patients), SSN (ciphertext), and Country. The values in the first row are as follows: Jane Doe, 1x7fg65se2e, and USA. The values in the second row are as follows: Jim Gray, 0x7ff65ae6d, and USA. The values in the third row are as follows: John Smith, 0y8fj75ea2c, and USA. At the bottom-right corner is a Column Encryption Key icon.](images/Whiteboarddesignsessionstudentguide-SQLServerhybridcloudimages/media/image5.jpeg "SQL Server Always Encrypted diagram")
 
-#### SQL Server Stretch Database
+### SQL Server Stretch Database
 
 ![Stretch Database is a feature of SQL Server 2016. On the bottom-left side (on premises) are icons for a Local database (numbered 1) and a User Application (numbered 3 and represented as a monitor). In the Local database icon are tables representing Eligible Data (green) and Local Data (orange). On the top-right side (Azure) is an icon of an Azure SQL database (numbered 2 and labeled Remote Endpoint), and inside this icon is a table representing Remote Data. Two bidirectional arrows (the green one labeled Eligible Data and the orange one labeled T-SQL Queries) point across both sides to and from the local database icon and the Azure SQL database icon. One orange bidirectional arrow labeled T-SQL Queries point to and from the Local database icon and the User Application icon. Below the diagram is the following numbered list: 1. Local database: on-premises instance 2. Remote endpoint: Azure SQL Database holding remote copy 3. Application accessing data](images/Whiteboarddesignsessionstudentguide-SQLServerhybridcloudimages/media/image6.png "SQL Server Stretch Database diagram")
 
