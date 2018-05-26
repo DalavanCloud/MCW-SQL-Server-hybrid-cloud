@@ -16,19 +16,30 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 # Contents 
 
-[SQL Server hybrid cloud whiteboard design session student guide](#sql-server-hybrid-cloud-whiteboard-design-session-student-guide)
+<!-- TOC -->
 
-[Abstract and learning objectives](#abstract-and-learning-objectives)
+- [SQL Server hybrid cloud](#sql-server-hybrid-cloud)
+    - [Whiteboard design session student guide](#whiteboard-design-session-student-guide)
+    - [March 2018](#march-2018)
+- [Contents](#contents)
+- [SQL Server hybrid cloud whiteboard design session student guide](#sql-server-hybrid-cloud-whiteboard-design-session-student-guide)
+    - [Abstract and learning objectives](#abstract-and-learning-objectives)
+    - [Step 1: Review the customer case study](#step-1--review-the-customer-case-study)
+            - [Facilitator/subject matter expert (SME) presentation of customer case study](#facilitator-subject-matter-expert-sme-presentation-of-customer-case-study)
+            - [Customer situation](#customer-situation)
+            - [Customer needs](#customer-needs)
+            - [Customer objections](#customer-objections)
+            - [Infographic for common scenarios](#infographic-for-common-scenarios)
+            - [Azure Site Recovery](#azure-site-recovery)
+            - [Azure Traffic Manager](#azure-traffic-manager)
+            - [SQL Server Always Encrypted](#sql-server-always-encrypted)
+            - [SQL Server Stretch Database](#sql-server-stretch-database)
+    - [Step 2: Design a proof of concept solution](#step-2--design-a-proof-of-concept-solution)
+    - [Step 3: Present the solution](#step-3--present-the-solution)
+    - [Wrap-up](#wrap-up)
+    - [Additional references](#additional-references)
 
-[Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
-
-[Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
-
-[Step 3: Present the solution](#step-3-present-the-solution)
-
-[Wrap-up](#_Toc492640595)
-
-[Additional references](#additional-references)
+<!-- /TOC -->
 
 # SQL Server hybrid cloud whiteboard design session student guide
 
@@ -128,7 +139,7 @@ Finally, Fabrikam has a requirement to store the database backups offsite in an 
 
 #### Azure Site Recovery
 
-![This is a screenshot of a slide. Common scenarios for Azure Site Recovery include the following bulleted list items: ??? Support for on-premises to on-premises, and on-premises to Azure failover ??? Automated protection and replication of on-premises, Hyper-V, and VMware machines ??? Orchestrated failover ??? Customizable recovery plans ??? Recovery plan testing To the right of the list is a diagram of the multiple deployment architectures of Azure Site Recover: on-premises datacenter to Azure, and on-premises datacenter to on-premises datacenter.](images/Whiteboarddesignsessionstudentguide-SQLServerhybridcloudimages/media/image3.png "Common Azure Site Recovery scenarios")
+![This is a screenshot of a slide. Common scenarios for Azure Site Recovery include the following bulleted list items: Support for on-premises to on-premises, and on-premises to Azure failover, Automated protection and replication of on-premises, Hyper-V, and VMware machines, Orchestrated failover, Customizable recovery plans, Recovery plan testing To the right of the list is a diagram of the multiple deployment architectures of Azure Site Recover: on-premises datacenter to Azure, and on-premises datacenter to on-premises datacenter.](images/Whiteboarddesignsessionstudentguide-SQLServerhybridcloudimages/media/image3.png "Common Azure Site Recovery scenarios")
 
 #### Azure Traffic Manager
 
