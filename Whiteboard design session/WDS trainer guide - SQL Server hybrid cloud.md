@@ -167,17 +167,9 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 ## Abstract and learning objectives 
 
-In this workshop, attendees will work with a media publishing company to design a hybrid cloud disaster recovery solution. Attendees will design the solution to handle large spikes in load and harden the security to include encryption of PCI data. Additionally, attendees will implement an archival strategy to keep databases sizes in check.
+In this whiteboard design session, you will look at how to design an application for hybrid deployment between on-premises and Microsoft Azure. You will consider how the web tier must be made available in the event of an outage as well as how to configure SQL Server Always-on Availability Groups to deploy and failover between both locations.
 
-Attendees will be better able to design a hybrid disaster recovery solution between an on-premises VMWare environment and Azure. In addition,
-
--   Design a SQL Server scale-out solution
-
--   Protect database backups from local failures
-
--   Archive cold data from an on-premises SQL Server
-
--   Perform end-to-end encryption on sensitive application data
+At the end of this whiteboard design session, you will be better able to design a hybrid disaster recovery solution between an on-premises VMWare environment and Azure. In addition, you will design a SQL Server scale-out solution, protect database backups from local failures, archive cold data from an on-premises SQL Server, and perform end-to-end encryption on sensitive application data.
 
 ## Step 1: Review the customer case study 
 
