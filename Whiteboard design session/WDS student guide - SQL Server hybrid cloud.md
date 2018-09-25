@@ -9,7 +9,7 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-August 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -22,11 +22,10 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
-# Contents 
+**Contents** 
 
 <!-- TOC -->
 
-- [Contents](#contents)
 - [SQL Server hybrid cloud whiteboard design session student guide](#sql-server-hybrid-cloud-whiteboard-design-session-student-guide)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
@@ -55,28 +54,29 @@ At the end of this whiteboard design session, you will be better able to design 
 
 ## Step 1: Review the customer case study 
 
-**Outcome** 
+**Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
-Timeframe: 15 minutes 
+Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+1.  Meet your table participants and trainer.
 
+2.  Read all of the directions for steps 1-3 in the student guide.
+
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
 Fabrikam Publishing is a media and publishing company in Seattle, Washington with approximately 5000 employees. They have a successful direct-to-consumer e-commerce site built with .NET, and they use SQL Server to store customer profile and order information.
 
-Fabrikam has a single data center for both internal and customer-facing applications. Most servers are virtualized on VMware. Application servers primarily run Microsoft server software, including Active Directory (AD) Domain Services and a number of AD-integrated services including Exchange 2013 as well as multi-tier, internal, and AD-integrated Microsoft Internet Information Services (IIS)--based web applications with SQL Server 2016 as the database platform.
+Fabrikam has a single data center for both internal and customer-facing applications. Most servers are virtualized on VMware. Application servers primarily run Microsoft server software, including Active Directory (AD) Domain Services and a number of AD-integrated services including Exchange 2013 as well as multi-tier, internal, and AD-integrated Microsoft Internet Information Services (IIS) based web applications with SQL Server 2016 as the database platform.
 
 Recently, the site experienced a multi-day outage due to a lightning strike that disabled both the primary and secondary cooling systems at the data center. In order to avoid such long outages in the future, Fabrikam is investing in a secondary site for disaster recovery. "A disaster recovery site has been on our project proposals for the last four years, but it has always been shelved due to budget constraints," says Michelle Jenkins, Chief Information Officer (CIO). "The recent outage combined with the new capabilities in the cloud have finally encouraged the board to approve the additional budget necessary to build out our disaster recover (DR) capabilities." To keep capital expenditures in check, Fabrikam would like to use the public cloud to host its DR site.
 
-James Sherburn, Director of Information Technology Operations, describes Fabrikam's current disaster recovery strategy as a classic backup/restore strategy with no offsite warm standby machines. Backups are dumped on a network share, and these backups are then archived once per day to an offsite location. According to Sherburn, this strategy requires an "all hands-on deck" approach to recovering the site---which is resource-intensive and slow. It also requires significant expense to bring temporary hardware online at a remote, vendor-provided data center. Because of the cost and complexity, this disaster recovery plan has never been tested, and Information Technology (IT) is not confident that it could bring up the secondary site in a reasonable amount of time. This lack of confidence in the current DR strategy prevented IT management from implementing a failover during the last disaster, resulting in significant losses for the company.
+James Sherburn, Director of Information Technology Operations, describes Fabrikam's current disaster recovery strategy as a classic backup/restore strategy with no offsite warm standby machines. Backups are dumped on a network share, and these backups are then archived once per day to an offsite location. According to Sherburn, this strategy requires an "all hands on deck" approach to recovering the site, which is resource-intensive and slow. It also requires significant expense to bring temporary hardware online at a remote, vendor-provided data center. Because of the cost and complexity, this disaster recovery plan has never been tested, and Information Technology (IT) is not confident that it could bring up the secondary site in a reasonable amount of time. This lack of confidence in the current DR strategy prevented IT management from implementing a failover during the last disaster, resulting in significant losses for the company.
 
 The application team is concerned that the database DR solution will have a negative impact on the overall database performance. The website currently experiences periodic database latency issues during peak load. They would like to have a solution that improves performance of the predominantly read workloads generated by the website to improve the overall responsiveness and the user experience. The Database Architect, Brandon Burns, saw a presentation at a conference last year on leveraging SQL Server Availability Groups with readable secondaries to offload read workloads. Brandon said, "Our ideal solution would be a scale out solution for the data platform, however, we are concerned about potentially making a lot of application code changes." We need a solution that minimizes the amount of changes in the application, and we would like to investigate SQL Server Availability Groups and readable secondaries.
 
@@ -88,42 +88,41 @@ An additional concern is that the database maintenance jobs are exceeding the cu
 
 Finally, Fabrikam has a requirement to store the database backups offsite in an encrypted format within two hours of backup completion. The current backup strategy consists of SQL Server backups to an on-premises file server; the backups are then copied to tape and shipped offsite. This process can take up to 24 hours to secure the tapes offsite. In addition to being slow, the tape backups are notoriously unreliable and are generally not available for ad hoc access in the case that a restore becomes necessary. Fabrikam would like to have these backups secured offsite within two hours of the backup completing.
 
-![Fabrikam\'s datacenter is represented as icons that are labeled Web Farm, Application Servers, VMWare, and vCenter. Below that is another icon that is labeled SQL Server 2016, which is Fabrikam\'s database platform.](images/Whiteboarddesignsessiontrainerguide-SQLServerhybridcloudimages/media/image2.png "Fabrikam Publishing data center illustration")
+![Fabrikam's datacenter is represented as icons that are labeled Web Farm, Application Servers, VMWare, and vCenter. Below that is another icon that is labeled SQL Server 2016, which is Fabrikam\'s database platform.](images/Whiteboarddesignsessiontrainerguide-SQLServerhybridcloudimages/media/image2.png "Fabrikam Publishing data center illustration")
 
 ### Customer needs 
 
-1.  Full multi-site disaster recovery solution with minimal complexity, orchestrated failover, and near-zero data loss
+1.  A full multi-site disaster recovery solution with minimal complexity, orchestrated failover, and near-zero data loss.
 
-2.  Highly available, fault-tolerant SQL Server service with cross-site disaster recovery and minimal impact on database performance
+2.  Highly available, fault-tolerant SQL Server service with cross-site disaster recovery and minimal impact on database performance.
 
-3.  Scale-out the data platform utilizing SQL Server Availability Groups with readable secondaries to offload the heavy read workloads from the primary replica with minimal changes to the application
+3.  Scale-out the data platform utilizing SQL Server Availability Groups with readable secondaries to offload the heavy read workloads from the primary replica with minimal changes to the application.
 
-4.  The ability to seamlessly scale DR site infrastructure as the environment grows
+4.  The ability to seamlessly scale DR site infrastructure as the environment grows.
 
-5.  Data encryption solution that encrypts only PCI data at the application and database level
+5.  Data encryption solution that encrypts only PCI data at the application and database level.
 
-6.  Key management solution that does not expose the unencrypted keys to unauthorized personnel (including DBAs and Developers) and allows for key management by the security administration team
+6.  Key management solution that does not expose the unencrypted keys to unauthorized personnel (including DBAs and Developers) and allows for key management by the security administration team.
 
-7.  Data archiving to keep database sizes more manageable and reduce the amount of time needed for database maintenance
+7.  Data archiving to keep database sizes more manageable and reduce the amount of time needed for database maintenance.
 
-8.  Secure offsite backups in less than two hours after backup completion
+8.  Secure offsite backups in less than two hours after backup completion.
 
 ### Customer objections 
 
-1.  Solution must support orchestrated failover so that failover does not require an all hands-on deck
+1.  Solution must support orchestrated failover so that failover does not require an all hands-on deck.
 
-2.  Solution must support the existing VMware infrastructure
+2.  Solution must support the existing VMware infrastructure.
 
-3.  Solution must not have a significant impact on database performance
+3.  Solution must not have a significant impact on database performance.
 
-4.  DR infrastructure must be easily scalable to support changes in the workload
+4.  DR infrastructure must be easily scalable to support changes in the workload.
 
-5.  The disaster recovery sites must be highly available after a failover
+5.  The disaster recovery sites must be highly available after a failover.
 
-6.  Archive solution must not impact the current applications that periodically pull historical data from the production system
+6.  Archive solution must not impact the current applications that periodically pull historical data from the production system.
 
 7.  Backups need to be secured offsite in less than two hours.
-
 
 ### Infographic for common scenarios
 
@@ -147,13 +146,13 @@ Finally, Fabrikam has a requirement to store the database backups offsite in an 
 
 **Outcome**
 
-Design a solution and prepare to present a solution to the target customer audience in a 15-minute chalk-talk format.
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart.
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
 
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
 
@@ -161,13 +160,13 @@ Directions: With all participants at your table, answer the following questions 
 
 **Design**
 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 ***Plan for high availability and disaster recovery***
 
 1. **Orchestrated failover**: Fabrikam needs to automate and simplify the failover process for the web site. Design a solution that supports orchestrated failover of the entire site.
 
-2. **Additional infrastructure:** Address what additional infrastructure Fabrikam needs to enable the stated solution
+2. **Additional infrastructure:** Address what additional infrastructure Fabrikam needs to enable the stated solution.
 
 3. **SQL Server:** The DR solution for SQL Server should include near-zero data loss. Design the DR solution to provide near-zero data loss, but minimal overhead on normal transactions. The solution should not require the application to be recoded.
 
@@ -177,33 +176,33 @@ Directions: With all participants at your table, respond to the following questi
 
 ***Scale out data platform***
 
-1. **Database scale out:** The solution should include the ability to scale out the data platform for heavy read workloads without major code changes to the existing application
+1. **Database scale out:** The solution should include the ability to scale out the data platform for heavy read workloads without major code changes to the existing application.
 
 2. **User experience**: Address the user experience issues of the data tier. How will this solution address this?
 
 3. **Application impact**: What impact will your design have on the existing application?
 
-4. **Diagram the solution**
+4. **Diagram the solution**.
 
 ***Protect data***
 
-1. **Encrypt PCI data:** Choose an appropriate encryption technology to protect credit card related data
+1. **Encrypt PCI data:** Choose an appropriate encryption technology to protect credit card related data.
 
 2. **Key management**: How are the encryption keys to be managed in your design?
 
 3. **Application impact**: What impact will your design have on the existing application?
 
-4. **Encryption type**: Create a table that shows each type of PCI data and the appropriate type of encryption for each
+4. **Encryption type**: Create a table that shows each type of PCI data and the appropriate type of encryption for each.
 
 ***Data archiving***
 
 1. **Plan**: What questions would you pose to the customer in designing a data archive strategy?
 
-2. **Identify archive data**: Describe how you would identify the appropriate tables for archiving
+2. **Identify archive data**: Describe how you would identify the appropriate tables for archiving.
 
 3. **Determine impact**: What impact will your design have on the existing reporting system? How will this solution effect the current maintenance issues?
 
-4. **Diagram the solution**
+4. **Diagram the solution**.
 
 ***Offsite backup***
 
@@ -212,44 +211,51 @@ How does this design meet the stated security goals?
 
 2. **Provide the following configuration details:** What will be needed in the event that a database needs to be restored? How does this solution impact the time to restore? What considerations need to be made with regard to Azure Storage Account scale targets?
 
-3. **Diagram the solution Prepare**
-
+3. **Diagram the solution**..
 
 **Prepare**
 
-Directions: With all participants at your table: 
+Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
-2.  Identify the benefits of your solution
-3.  Determine how you will respond to the customer’s objections
+1.  Identify any customer needs that are not addressed with the proposed solution.
+
+2.  Identify the benefits of your solution.
+
+3.  Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
+
+1.  Pair with another table.
+
+2.  One table is the Microsoft team and the other table is the customer.
+
+3.  The Microsoft team presents their proposed solution to the customer.
+
+4.  The customer makes one of the objections from the list of objections.
+
+5.  The Microsoft team responds to the objection.
+
 6.  The customer team gives feedback to the Microsoft team.
-7.  Tables switch roles and repeat Steps 2–6
 
+7.  Tables switch roles and repeat Steps 2-6.
 
-## Wrap-up 
+##  Wrap-up 
 
 Timeframe: 15 minutes
 
-Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study. 
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ##  Additional references
 
@@ -258,8 +264,8 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | **Description** | **Links** |
 | Azure Site Recovery    | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview>  |
 | Replicate VMware virtual machines and physical servers to Azure with Azure Site Recovery    | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-vmware-to-azure>  |
-| Protect SQL Server with SQL Server disaster recovery and Azure Site Recovery         | <<https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-sql> |
-| High availability and disaster recovery for SQL Server in Azure Virtual Machines |  <<https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr>   |  |
+| Protect SQL Server with SQL Server disaster recovery and Azure Site Recovery         | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-sql> |
+| High availability and disaster recovery for SQL Server in Azure Virtual Machines |  <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr>   |  |
 | Configure an ILB listener for AlwaysOn Availability Groups in Azure   | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-int-listener> |
 | PCI DSS Quick Reference Guide   | <https://www.pcisecuritystandards.org/documents/PCIDSS_QRGv3_2.pdf>   |
 | Always Encrypted  | <https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine>  |
