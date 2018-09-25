@@ -211,7 +211,7 @@ How does this design meet the stated security goals?
 
 2. **Provide the following configuration details:** What will be needed in the event that a database needs to be restored? How does this solution impact the time to restore? What considerations need to be made with regard to Azure Storage Account scale targets?
 
-3. **Diagram the solution**..
+3. **Diagram the solution**.
 
 **Prepare**
 
