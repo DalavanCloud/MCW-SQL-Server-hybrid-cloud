@@ -296,8 +296,6 @@ Directions: With all participants at your table, respond to the following questi
 
 4. **Availability:** The site should be highly available at the primary site. Explain which services would be used, and how your design meets these goals after failover.
 
-5. **Diagram the solution**
-
 ***Scale out data platform***
 
 1. **Database scale out:** The solution should include the ability to scale out the data platform for heavy read workloads without major code changes to the existing application
@@ -334,8 +332,6 @@ Directions: With all participants at your table, respond to the following questi
 How does this design meet the stated security goals?
 
 2. **Provide the following configuration details:** What will be needed in the event that a database needs to be restored? How does this solution impact the time to restore? What considerations need to be made with regard to Azure Storage Account scale targets?
-
-3. **Diagram the solution Prepare**
 
 **Prepare**
 
