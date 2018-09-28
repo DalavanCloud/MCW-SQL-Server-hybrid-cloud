@@ -9,7 +9,7 @@ Whiteboard design session trainer guide
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -65,25 +65,25 @@ Thank you for taking time to support the whiteboard design sessions as a trainer
 
 An amazing trainer:
 
--   Creates a safe environment in which learning can take place
+-   Creates a safe environment in which learning can take place.
 
--   Stimulates the participant's thinking
+-   Stimulates the participant's thinking.
 
--   Involves the participant in the learning process
+-   Involves the participant in the learning process.
 
--   Manages the learning process (on time, on topic, and adjusting to benefit participants)
+-   Manages the learning process (on time, on topic, and adjusting to benefit participants).
 
--   Ensures individual participant accountability
+-   Ensures individual participant accountability.
 
--   Ties it all together for the participant
+-   Ties it all together for the participant.
 
--   Provides insight and experience to the learning process
+-   Provides insight and experience to the learning process.
 
--   Effectively leads the whiteboard design session discussion
+-   Effectively leads the whiteboard design session discussion.
 
--   Monitors quality and appropriateness of participant deliverables
+-   Monitors quality and appropriateness of participant deliverables.
 
--   Effectively leads the feedback process
+-   Effectively leads the feedback process.
 
 ## Whiteboard design session flow 
 
@@ -91,7 +91,9 @@ Each whiteboard design session uses the following flow:
 
 **Step 1: Review the customer case study (15 minutes)**
 
-Outcome: Analyze your customer's needs
+**Outcome**
+
+Analyze your customer's needs.
 
 -   Customer's background, situation, needs and technical requirements
 
@@ -101,19 +103,23 @@ Outcome: Analyze your customer's needs
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format 
+**Outcome**
 
--   Determine your target customer audience
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
--   Determine customer's business needs to address your solution
+-   Determine your target customer audience.
 
--   Design and diagram your solution
+-   Determine customer's business needs to address your solution.
 
--   Prepare to present your solution
+-   Design and diagram your solution.
+
+-   Prepare to present your solution.
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer
+**Outcome**
+
+Present solution to your customer:
 
 -   Present solution
 
@@ -129,15 +135,15 @@ Outcome: Present solution to your customer
 
 Before conducting your first whiteboard design session:
 
--   Read the Student guide (including the case study) and Trainer guide
+-   Read the Student guide (including the case study) and Trainer guide.
 
--   Become familiar with all key points and activities
+-   Become familiar with all key points and activities.
 
--   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions
+-   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
 
--   Prior to the whiteboard design session, discuss the case study to pick up more ideas
+-   Prior to the whiteboard design session, discuss the case study to pick up more ideas.
 
--   Make notes for later
+-   Make notes for later.
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
@@ -147,7 +153,7 @@ Before conducting your first whiteboard design session:
 
 When participants are doing activities, you can **look ahead to refresh your memory**.
 
--   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing
+-   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
 
 -   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
 
@@ -161,7 +167,7 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 **Ask first**, whenever possible. Before launching into a topic, learn your audience's opinions about it and experiences with it. Asking first enables you to assess their level of knowledge and experience, and leaves them more open to what you are presenting.
 
-**Wait for responses**. If you ask a question such as, "What is your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
+**Wait for responses**. If you ask a question such as, "What's your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
 
 #  SQL Server hybrid cloud whiteboard design session student guide
 
@@ -173,28 +179,28 @@ At the end of this whiteboard design session, you will be better able to design 
 
 ## Step 1: Review the customer case study 
 
-**Outcome** 
+**Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
-Timeframe: 15 minutes 
+Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
+Directions:  With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+1.  Meet your table participants and trainer.
 
+2.  Read all of the directions for steps 1-3 in the student guide.
+
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
 Fabrikam Publishing is a media and publishing company in Seattle, Washington with approximately 5000 employees. They have a successful direct-to-consumer e-commerce site built with .NET, and they use SQL Server to store customer profile and order information.
-
-Fabrikam has a single data center for both internal and customer-facing applications. Most servers are virtualized on VMware. Application servers primarily run Microsoft server software, including Active Directory (AD) Domain Services and a number of AD-integrated services including Exchange 2013 as well as multi-tier, internal, and AD-integrated Microsoft Internet Information Services (IIS)--based web applications with SQL Server 2016 as the database platform.
+Fabrikam has a single data center for both internal and customer-facing applications. Most servers are virtualized on VMware. Application servers primarily run Microsoft server software, including Active Directory (AD) Domain Services and a number of AD-integrated services including Exchange 2013 as well as multi-tier, internal, and AD-integrated Microsoft Internet Information Services (IIS) based web applications with SQL Server 2016 as the database platform.
 
 Recently, the site experienced a multi-day outage due to a lightning strike that disabled both the primary and secondary cooling systems at the data center. In order to avoid such long outages in the future, Fabrikam is investing in a secondary site for disaster recovery. "A disaster recovery site has been on our project proposals for the last four years, but it has always been shelved due to budget constraints," says Michelle Jenkins, Chief Information Officer (CIO). "The recent outage combined with the new capabilities in the cloud have finally encouraged the board to approve the additional budget necessary to build out our disaster recover (DR) capabilities." To keep capital expenditures in check, Fabrikam would like to use the public cloud to host its DR site.
 
-James Sherburn, Director of Information Technology Operations, describes Fabrikam's current disaster recovery strategy as a classic backup/restore strategy with no offsite warm standby machines. Backups are dumped on a network share, and these backups are then archived once per day to an offsite location. According to Sherburn, this strategy requires an "all hands-on deck" approach to recovering the site---which is resource-intensive and slow. It also requires significant expense to bring temporary hardware online at a remote, vendor-provided data center. Because of the cost and complexity, this disaster recovery plan has never been tested, and Information Technology (IT) is not confident that it could bring up the secondary site in a reasonable amount of time. This lack of confidence in the current DR strategy prevented IT management from implementing a failover during the last disaster, resulting in significant losses for the company.
+James Sherburn, Director of Information Technology Operations, describes Fabrikam's current disaster recovery strategy as a classic backup/restore strategy with no offsite warm standby machines. Backups are dumped on a network share, and these backups are then archived once per day to an offsite location. According to Sherburn, this strategy requires an "all hands on deck" approach to recovering the site, which is resource-intensive and slow. It also requires significant expense to bring temporary hardware online at a remote, vendor-provided data center. Because of the cost and complexity, this disaster recovery plan has never been tested, and Information Technology (IT) is not confident that it could bring up the secondary site in a reasonable amount of time. This lack of confidence in the current DR strategy prevented IT management from implementing a failover during the last disaster, resulting in significant losses for the company.
 
 The application team is concerned that the database DR solution will have a negative impact on the overall database performance. The website currently experiences periodic database latency issues during peak load. They would like to have a solution that improves performance of the predominantly read workloads generated by the website to improve the overall responsiveness and the user experience. The Database Architect, Brandon Burns, saw a presentation at a conference last year on leveraging SQL Server Availability Groups with readable secondaries to offload read workloads. Brandon said, "Our ideal solution would be a scale out solution for the data platform, however, we are concerned about potentially making a lot of application code changes." We need a solution that minimizes the amount of changes in the application, and we would like to investigate SQL Server Availability Groups and readable secondaries.
 
@@ -210,38 +216,37 @@ Finally, Fabrikam has a requirement to store the database backups offsite in an 
 
 ### Customer needs 
 
-1.  Full multi-site disaster recovery solution with minimal complexity, orchestrated failover, and near-zero data loss
+1.  A full multi-site disaster recovery solution with minimal complexity, orchestrated failover, and near-zero data loss.
 
-2.  Highly available, fault-tolerant SQL Server service with cross-site disaster recovery and minimal impact on database performance
+2.  Highly available, fault-tolerant SQL Server service with cross-site disaster recovery and minimal impact on database performance.
 
-3.  Scale-out the data platform utilizing SQL Server Availability Groups with readable secondaries to offload the heavy read workloads from the primary replica with minimal changes to the application
+3.  Scale-out the data platform utilizing SQL Server Availability Groups with readable secondaries to offload the heavy read workloads from the primary replica with minimal changes to the application.
 
-4.  The ability to seamlessly scale DR site infrastructure as the environment grows
+4.  The ability to seamlessly scale DR site infrastructure as the environment grows.
 
-5.  Data encryption solution that encrypts only PCI data at the application and database level
+5.  Data encryption solution that encrypts only PCI data at the application and database level.
 
-6.  Key management solution that does not expose the unencrypted keys to unauthorized personnel (including DBAs and Developers) and allows for key management by the security administration team
+6.  Key management solution that does not expose the unencrypted keys to unauthorized personnel (including DBAs and Developers) and allows for key management by the security administration team.
 
-7.  Data archiving to keep database sizes more manageable and reduce the amount of time needed for database maintenance
+7.  Data archiving to keep database sizes more manageable and reduce the amount of time needed for database maintenance.
 
-8.  Secure offsite backups in less than two hours after backup completion
+8.  Secure offsite backups in less than two hours after backup completion.
 
 ### Customer objections 
 
-1.  Solution must support orchestrated failover so that failover does not require an all hands-on deck
+1.  Solution must support orchestrated failover so that failover does not require an all hands-on deck.
 
-2.  Solution must support the existing VMware infrastructure
+2.  Solution must support the existing VMware infrastructure.
 
-3.  Solution must not have a significant impact on database performance
+3.  Solution must not have a significant impact on database performance.
 
-4.  DR infrastructure must be easily scalable to support changes in the workload
+4.  DR infrastructure must be easily scalable to support changes in the workload.
 
-5.  The disaster recovery sites must be highly available after a failover
+5.  The disaster recovery sites must be highly available after a failover.
 
-6.  Archive solution must not impact the current applications that periodically pull historical data from the production system
+6.  Archive solution must not impact the current applications that periodically pull historical data from the production system.
 
 7.  Backups need to be secured offsite in less than two hours.
-
 
 ### Infographic for common scenarios
 
@@ -265,13 +270,13 @@ Finally, Fabrikam has a requirement to store the database backups offsite in an 
 
 **Outcome**
 
-Design a solution and prepare to present a solution to the target customer audience in a 15-minute chalk-talk format.
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart.
+Directions: With all participants at your table, answer the following questions and list the answers on a flip chart:
 
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
 
@@ -279,7 +284,7 @@ Directions: With all participants at your table, answer the following questions 
 
 **Design**
 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 ***Plan for high availability and disaster recovery***
 
@@ -290,8 +295,6 @@ Directions: With all participants at your table, respond to the following questi
 3. **SQL Server:** The DR solution for SQL Server should include near-zero data loss. Design the DR solution to provide near-zero data loss, but minimal overhead on normal transactions. The solution should not require the application to be recoded.
 
 4. **Availability:** The site should be highly available at the primary site. Explain which services would be used, and how your design meets these goals after failover.
-
-5. **Diagram the solution**
 
 ***Scale out data platform***
 
@@ -330,44 +333,49 @@ How does this design meet the stated security goals?
 
 2. **Provide the following configuration details:** What will be needed in the event that a database needs to be restored? How does this solution impact the time to restore? What considerations need to be made with regard to Azure Storage Account scale targets?
 
-3. **Diagram the solution Prepare**
-
-
 **Prepare**
 
-Directions: With all participants at your table: 
+Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
-2.  Identify the benefits of your solution
-3.  Determine how you will respond to the customer’s objections
+1.  Identify any customer needs that are not addressed with the proposed solution.
+
+2.  Identify the benefits of your solution.
+
+3.  Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
+
+1.  Pair with another table.
+
+2.  One table is the Microsoft team and the other table is the customer.
+
+3.  The Microsoft team presents their proposed solution to the customer.
+
+4.  The customer makes one of the objections from the list of objections.
+
+5.  The Microsoft team responds to the objection.
+
 6.  The customer team gives feedback to the Microsoft team.
-7.  Tables switch roles and repeat Steps 2–6
 
+7.  Tables switch roles and repeat Steps 2-6.
 
-## Wrap-up 
+##  Wrap-up 
 
 Timeframe: 15 minutes
 
-Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study. 
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ##  Additional references
 
@@ -376,8 +384,8 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | **Description** | **Links** |
 | Azure Site Recovery    | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-overview>  |
 | Replicate VMware virtual machines and physical servers to Azure with Azure Site Recovery    | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-vmware-to-azure>  |
-| Protect SQL Server with SQL Server disaster recovery and Azure Site Recovery         | <<https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-sql> |
-| High availability and disaster recovery for SQL Server in Azure Virtual Machines |  <<https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr>   |  |
+| Protect SQL Server with SQL Server disaster recovery and Azure Site Recovery         | <https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-sql> |
+| High availability and disaster recovery for SQL Server in Azure Virtual Machines |  <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr>   |  |
 | Configure an ILB listener for AlwaysOn Availability Groups in Azure   | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-int-listener> |
 | PCI DSS Quick Reference Guide   | <https://www.pcisecuritystandards.org/documents/PCIDSS_QRGv3_2.pdf>   |
 | Always Encrypted  | <https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine>  |
@@ -392,47 +400,43 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer
+-   Check in with your table participants to introduce yourself as the trainer.
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and time frames of the whiteboard design session
+-   Briefly review the steps and timeframes of the whiteboard design session.
 
--   Ready, set, go! Let the table participants begin
+-   Ready, set, go! Let the table participants begin.
 
 ## Step 2: Design a proof of concept solution
 
--   Check in with your tables to ensure that they are transitioning from step to step on time
+-   Check in with your tables to ensure that they are transitioning from step to step on time.
 
--   Provide some feedback on their responses to the business needs and design
+-   Provide some feedback on their responses to the business needs and design.
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
--   Provide feedback for their responses to the customer's objections
+-   Provide feedback for their responses to the customer's objections.
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
 ## Step 3: Present the solution
 
--   Determine which table will be paired with your table before Step 3 begins
+-   Determine which table will be paired with your table before Step 3 begins.
 
--   For the first round, assign one table as the Microsoft team and the other table as the customer
+-   For the first round, assign one table as the presenting team and the other table as the customer.
 
--   Have the Microsoft team present their solution to the customer team
+-   Have the presenting team present their solution to the customer team.
 
-    -   Have the customer team provide one objection for the Microsoft team to respond to
+    -   Have the customer team provide one objection for the presenting team to respond to.
 
-    -   The presentation and objections should be no longer than 10 minutes
+    -   The presentation, objections, and feedback should take no longer than 15 minutes.
 
--   Have participants on the customer team give feedback to the Microsoft team
-
-    -   The feedback should be no longer than 5 minutes
-
-    -   If needed, the trainer may also provide feedback
+    -   If needed, the trainer may also provide feedback.
 
 ## Wrap-up
 
--   Have the table participants reconvene with the larger session group to hear the faciliator/SME share the following preferred solution
+-   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution.
 
 ##  Preferred target audience
 
@@ -448,21 +452,21 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 The solution for Fabrikam's scenario involved several technologies.
 
--   Implementing Azure Site Recovery to replicate VMware virtual machines to Azure and orchestrate failover in the event of a disaster
+-   Implementing Azure Site Recovery to replicate VMware virtual machines to Azure and orchestrate failover in the event of a disaster.
 
--   Using SQL Server AlwaysOn Availability Groups to provide synchronous high availability on-premises
+-   Using SQL Server AlwaysOn Availability Groups to provide synchronous high availability on-premises.
 
--   Using SQL Server AlwaysOn Availability Groups to provide asynchronous disaster recovery in Azure
+-   Using SQL Server AlwaysOn Availability Groups to provide asynchronous disaster recovery in Azure.
 
 -   Take advantage of SQL Server AlwaysOn Availability Groups with readable secondaries and read-intent routing to offload the heavy read workloads.
 
--   Using SQL Server Always Encrypted to encrypt and decrypt PCI data at the application to protect data in-flight or at rest with keys stored in Azure Key Vault
+-   Using SQL Server Always Encrypted to encrypt and decrypt PCI data at the application to protect data in-flight or at rest with keys stored in Azure Key Vault.
 
--   Using SQL Server Stretch Database to archive historical data to Azure SQL Database
+-   Using SQL Server Stretch Database to archive historical data to Azure SQL Database.
 
--   Implementing SQL Server Backup to URL to send backups to Azure Storage
+-   Implementing SQL Server Backup to URL to send backups to Azure Storage.
 
--   Using Azure Traffic Manager with Azure Site Recovery for availability of customer-facing sites
+-   Using Azure Traffic Manager with Azure Site Recovery for availability of customer-facing sites.
 
 ***Plan for high availability and disaster recovery***
 
@@ -480,9 +484,9 @@ The solution for Fabrikam's scenario involved several technologies.
 
    You will also need Active Directory on the secondary recovery site for SQL Server to run properly. A couple of options are available:
 
--  Small enterprise---if you have a small number of applications and a single domain controller for the on-premises site, and you want to fail over the entire site, we recommend you use Site Recovery replication to replicate the domain controller to the secondary datacenter or to Azure.
+-  Small enterprise:  If you have a small number of applications and a single domain controller for the on-premises site, and you want to fail over the entire site, we recommend you use Site Recovery replication to replicate the domain controller to the secondary datacenter or to Azure.
 
--   Medium to large enterprise---if you have a large number of applications, are running an Active Directory forest, and want to fail over by application or workload, we recommend you set up an additional domain controller in the secondary datacenter or in Azure. Note that if you are using AlwaysOn availability groups to recover to a remote site, we recommend you set up another additional domain controller on the secondary site or Azure to use for the recovered SQL Server instance.
+-   Medium to large enterprise:  If you have a large number of applications, are running an Active Directory forest, and want to fail over by application or workload, we recommend you set up an additional domain controller in the secondary datacenter or in Azure. Note that if you are using AlwaysOn availability groups to recover to a remote site, we recommend you set up another additional domain controller on the secondary site or Azure to use for the recovered SQL Server instance.
 
 3. **SQL Server:** The DR solution for SQL Server should include near-zero data loss. Design the DR solution to provide near-zero data loss along with minimal overhead on normal transactions.
 
@@ -496,7 +500,7 @@ The solution for Fabrikam's scenario involved several technologies.
 
     Traffic Manager will be configured on two external endpoints (the existing on-premises site and a site that you will pre-configure in DNS for when ASR fails over). When Traffic Manager detects an outage on the primary on-premises site, it will failover DNS resolution to the pre-configured site in Azure.
 
- > *Note: as long as the attendees understand this far, they are doing great. Implementation notes are here for the full details: <https://azure.microsoft.com/en-us/blog/reduce-rto-by-using-azure-traffic-manager-with-azure-site-recovery/>.*  For SQL Server connectivity from the application servers, SQL Server Availability Groups uses a Listener for client connectivity.
+ > **Note**: *As long as the attendees understand this far, they are doing great. Implementation notes are here for the full details: <https://azure.microsoft.com/en-us/blog/reduce-rto-by-using-azure-traffic-manager-with-azure-site-recovery/>.*  For SQL Server connectivity from the application servers, SQL Server Availability Groups uses a Listener for client connectivity.
 
 ***Scale out data platform***
 
@@ -544,19 +548,14 @@ The solution for Fabrikam's scenario involved several technologies.
 
    Credit card processing has numerous data elements. You want searchable data elements to be deterministic to support point lookups, equality joins, grouping and indexing. Any other data can be random. Below is an example of some of the critical data elements as defined by PCI and how you might map them to different encryption types.
 
-+------------------------------+---------------------+
-| **Data Element**             | **Encryption Type** |
-+==============================+=====================+
-| Primary Account Number (PAN) | Deterministic       |
-|                              |                     |
-| (full credit card number)    |                     |
-+------------------------------+---------------------+
-| Cardholder Name              | Deterministic       |
-+------------------------------+---------------------+
-| Service Code                 | Random              |
-+------------------------------+---------------------+
-| Expiration Date              | Deterministic       |
-+------------------------------+---------------------+
+    |         |            |
+    | ------------- |:-------------:|
+    | **Data Element** | **Encryption Type** |
+    | Primary Account Number (PAN)    | Deterministic  |
+    | Cardholder Name    | Deterministic  |
+    | Service Code    | Random  |
+    | Expiration Date    | Deterministic  |
+
 
 ***Data archiving: Keeping cold/historical data online***
 
@@ -598,43 +597,43 @@ The solution for Fabrikam's scenario involved several technologies.
 
    Restore times will generally be slower than restoring from a local disk, but faster than restoring from a remote tape archive. To optimize restore times, it is recommended that you adhere to the following best practices:
 
-- Add **perform volume maintenance tasks** user right to the SQL Server account to allow instant file initialization for the database during a restore
+    - Add **perform volume maintenance tasks** user right to the SQL Server account to allow instant file initialization for the database during a restore
 
-- Use compressed backups to minimize network transfer and disk read from Azure
+    - Use compressed backups to minimize network transfer and disk read from Azure
 
-- For backups in excess of 25 GB, copy the backup file locally with a utility, such as AzCopy, and perform the restore from the local copy
+    - For backups in excess of 25 GB, copy the backup file locally with a utility, such as AzCopy, and perform the restore from the local copy
 
-- If the log is very large in size (multiple gigabytes), it would be expected that restore would be slow. During restore, the log file must be zeroed, which takes a significant amount of time.
+    - If the log is very large in size (multiple gigabytes), it would be expected that restore would be slow. During restore, the log file must be zeroed, which takes a significant amount of time.
 
    Storage accounts have scale targets that determine the maximum file size, maximum capacity of the storage account, and the maximum throughput (among other things). All of these scale targets must be considered when sending backups to an Azure Storage Account.
 
 ## Checklist of preferred objection handling
 
-1.  Solution must support orchestrated failover so that failover does not require all hands-on deck
+1.  Solution must support orchestrated failover so that failover does not require all hands-on deck.
 
     **Potential answer**
 
     Azure Site Recovery orchestrates replication of your on-premises and virtual machines to a secondary on-premises data center or to Azure. Site recovery handles the VM replication and integrates with SQL Server Availability Groups. Failover can be kicked off with a simple click.
 
-2.  Solution must support the existing VMware infrastructure
+2.  Solution must support the existing VMware infrastructure.
 
     **Potential answer**
 
     Azure Site Recovery supports the replication of on-premises servers, Azure virtual machines, Hyper-V virtual machines, and VMware virtual machines.
 
-3.  Solution must not have a significant impact on database performance
+3.  Solution must not have a significant impact on database performance.
 
     **Potential answer**
 
     The use of asynchronous replicas to the disaster recovery site will keep the overhead of Availability Group replication to near zero, while providing the application the ability to offload the heavier read workloads to the secondary replicas.
 
-4.  Disaster recovery infrastructure must be easily scalable to support changes in the workload
+4.  Disaster recovery infrastructure must be easily scalable to support changes in the workload.
 
     **Potential answer**
 
     As workloads change, Azure virtual machines can be scaled up or down as necessary to provide the appropriate amount of resources.       This can be done by modifying the virtual machine size.
 
-5.  The disaster recovery sites must be highly available after a failover
+5.  The disaster recovery sites must be highly available after a failover.
 
     **Potential answer**
 
@@ -642,7 +641,7 @@ The solution for Fabrikam's scenario involved several technologies.
 
     SQL Server virtual machines will rely on a combination of Availability Sets and SQL Server Availability Groups to maintain uptime and synchronization. The SQL Servers will belong to a separate Availability Set from the web servers and will also use an internal load balancer.
 
-6.  Archive solution must not impact the current applications, which periodically pull historical data from the production system
+6.  Archive solution must not impact the current applications, which periodically pull historical data from the production system.
 
     **Potential answer**
 
